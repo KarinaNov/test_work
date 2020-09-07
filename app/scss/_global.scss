@@ -1,0 +1,162 @@
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+    font-size: inherit;
+}
+
+body{
+    min-width: 320px;
+    overflow-x: hidden;
+    position: relative;
+    color: #1f373d;
+    @extend %montserrat-regular;
+    font-size: 13px;
+    line-height: 26px;
+}
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+}
+
+.logo{
+    font-size: 25px;
+    @extend %montserrat-semiBold;
+}
+
+.subtitle{
+    font-size: 40px;
+    line-height: 50px;
+    width: 500px;
+    padding-top: 55px
+}
+
+.search{
+    font-size: 15px;
+    display: flex;
+    &-icon{
+        position: relative;
+        &::before{
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 27px;
+        bottom: 0;
+        width: 20px;
+        background: url(../img/search.svg);
+        z-index: 2;
+        background-repeat: no-repeat;
+    }
+}
+    &-input{
+        width: 478px;
+        height: 70px;
+        border-radius: 5px 0px 0px 5px;
+        border: none;
+        background: #fff;
+        padding: 15px 50px;
+        font-size: 13px;
+        color: #fff;
+        position: relative;
+         display: block; outline: none;
+        }
+    &-btn{
+        width: 115px;
+        height: 70px;
+        cursor: pointer;
+        border: none;
+        border-radius: 0px 5px 5px 0px;
+        @extend %yellow; 
+        padding: 20px 25px;
+        }
+    }
+
+
+
+
+.card{
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item{
+        max-width: 355px;
+        background-color: #fff;
+        max-width: 350px;
+        margin: 70px 0px 0px 0px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Параметры тени */
+        &-content{
+            &-title{
+                font-size: 15px;
+                @extend %montserrat-semiBold; 
+                margin-bottom: 25px;
+            }
+            &-line{
+                display: flex;
+            }
+            &-list{
+                display: flex;
+                justify-content: space-around;
+                width: 150px;
+                position: relative;
+                margin-left: auto;
+            }}}}
+
+.description {
+    max-width: 485px;
+    &__title{
+        font-size: 25px;
+    }
+    &__text{
+        padding: 25px 0 40px 0;
+    }
+}
+
+.reverce{
+    flex-direction: row-reverse;
+}
+
+
+.arrow-icon{
+    position: relative;
+    &::before{
+        content: "";
+    position: absolute;
+    right: 25px;
+    top: 108px;
+    bottom: 0;
+    width: 31px;
+    background: url(../img/point-right.svg);
+    z-index: 5;
+    background-repeat: no-repeat;
+    
+}
+}
